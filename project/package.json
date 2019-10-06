@@ -1,0 +1,28 @@
+{
+  "name": "ace-devops-demo",
+  "version": "1.0.0",
+  "description": "Association of Computer Engineers DevOps Demo",
+  "main": "index.js",
+  "repository": "https://github.com/UF-ACE/devops-demo",
+  "author": "Christopher Miller <christophemiller@ufl.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^4.5.0",
+    "@zeit/next-sass": "^1.0.1",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "next": "^9.0.8"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint pages/",
+    "fix": "eslint --fix pages/"
+  }
+}
