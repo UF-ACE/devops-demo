@@ -22,7 +22,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint pages/",
-    "fix": "eslint --fix pages/"
+    "lint": "eslint pages/*"
   }
 }
