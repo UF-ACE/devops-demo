@@ -1,0 +1,23 @@
+---
+resources:
+- name: website
+  type: git
+  source:
+    uri: https://github.com/UF-ACE/devops-demo
+    branch: master
+
+jobs:
+- name: unit
+  plan:
+  - get: website
+    trigger: true
+  - task: run-unit
+    file: booklit/ci/test.yml
+
+- name: build
+  plan:
+  - get: website
+    passed: [unit]
+    trigger: true
+  - task: run-build
+    file: booklit/ci/build.yml
