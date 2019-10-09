@@ -7,17 +7,9 @@ resources:
     branch: master
 
 jobs:
-- name: unit
+- name: test
   plan:
   - get: website
     trigger: true
   - task: run-unit
-    file: booklit/ci/test.yml
-
-- name: build
-  plan:
-  - get: website
-    passed: [unit]
-    trigger: true
-  - task: run-build
-    file: booklit/ci/build.yml
+    file: project/ci/test.yml
