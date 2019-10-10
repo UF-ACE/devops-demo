@@ -2,6 +2,8 @@
 
 cd website/project
 
-npm install
+npm install -g yarn
 
-npm run lint
+yarn install
+
+yarn lint
