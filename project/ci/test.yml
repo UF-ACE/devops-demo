@@ -11,4 +11,6 @@ inputs:
 - name: website
 
 run:
-  path: website/project/ci/scripts/test
+  path: sh
+  args:
+    - website/project/ci/scripts/test
