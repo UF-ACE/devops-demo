@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd website
+cd website/project
 
 npm install
 
