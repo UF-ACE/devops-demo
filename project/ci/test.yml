@@ -5,12 +5,10 @@ image_resource:
   type: docker-image
   source:
     repository: node
-    tag: 'carbon-alpine'
+    tag: '12-slim'
 
 inputs:
 - name: website
 
 run:
-  path: sh
-  args:
-    - website/project/ci/scripts/test
+  path: website/project/ci/scripts/test
