@@ -1,4 +1,4 @@
-FROM node:carbon as builder
+FROM node:12-alpine as builder
 
 WORKDIR /app
 
