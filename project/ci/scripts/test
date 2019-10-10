@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ../..
+
 npm install
 
-npm run link
+npm run lint

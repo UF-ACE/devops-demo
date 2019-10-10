@@ -2,14 +2,22 @@
 resources:
 - name: website
   type: git
+  icon: github-circle
   source:
     uri: https://github.com/UF-ACE/devops-demo
-    branch: master
 
 jobs:
 - name: test
   plan:
   - get: website
     trigger: true
-  - task: run-unit
-    file: project/ci/test.yml
+  - task: run-test
+    file: website/project/ci/test.yml
+
+- name: build
+  plan:
+  - get: website
+    passed: [test]
+    trigger: true
+  - task: run-build
+    file: website/project/ci/test.yml

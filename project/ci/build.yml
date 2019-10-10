@@ -4,11 +4,11 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: node
-    tag: 'carbon'
+    repository: docker
+    tag: 'latest'
 
 inputs:
 - name: website
 
 run:
-  path: website/project/ci/scripts/test
+  path: website/project/ci/scripts/build
