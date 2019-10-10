@@ -6,11 +6,13 @@ ADD . .
 
 ENV NODE_ENV production
 
-RUN npm install
+RUN npm install -g yarn
 
-RUN npm run build
+RUN yarn install
 
-RUN npm run export
+RUN yarn build
+
+RUN yarn export
 
 FROM nginx:1.17.3-alpine
 
