@@ -14,5 +14,5 @@ run:
   path: entrypoint.sh
   args:
     - bash
-    - -ceux
+    - -eux
     - website/project/ci/scripts/build

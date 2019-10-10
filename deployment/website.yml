@@ -20,4 +20,5 @@ jobs:
     passed: [test]
     trigger: true
   - task: run-build
-    file: website/project/ci/test.yml
+    privileged: true
+    file: website/project/ci/build.yml
